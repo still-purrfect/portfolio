@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Portfolio</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background: #faf7ff;
+            color: #333;
+        }
+
+        /* NAVBAR */
+        .navbar {
+            background: #6a4c93;
+            padding: 15px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .navbar a {
+            color: white;
+            margin: 15px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.2s ease;
+        }
+
+        .navbar a:hover {
+            opacity: 0.8;
+            transform: translateY(-2px);
+        }
+
+        /* CONTENT */
+        .container {
+            text-align: center;
+            margin-top: 80px;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #6a4c93;
+            font-size: 40px;
+        }
+
+        h2 {
+            font-weight: 400;
+            color: #444;
+        }
+
+        p {
+            font-size: 16px;
+            color: #555;
+        }
+
+        hr {
+            width: 60%;
+            margin: 20px auto;
+            border: 1px solid #eee;
+        }
+
+        /* ICON ANIMATION */
+        a i {
+            transition: transform 0.2s ease;
+        }
+
+        a i:hover {
+            transform: scale(1.2);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="navbar">
+        <a href="/">Home</a>
+        <a href="/about/">About</a>
+        <a href="/projects/">Projects</a>
+        <a href="/contact/">Contact</a>
+    </div>
+
+    <div class="container">
+        {% block content %}
+        {% endblock %}
+    </div>
+
+</body>
+</html>

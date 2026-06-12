@@ -1,0 +1,96 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1>My Projects 💼</h1>
+<p style="color:#555;">A collection of projects I’ve worked on while learning and building my skills.</p>
+
+<div style="
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    margin-top: 40px;
+    padding: 0 20px;
+">
+
+    <!-- PROJECT 1 -->
+    <div style="
+        background: white;
+        padding: 20px;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+    "
+    onmouseover="this.style.transform='translateY(-5px)'"
+    onmouseout="this.style.transform='translateY(0)'">
+
+        <h3 style="color:#6C63FF; margin-bottom: 10px;">Portfolio Website</h3>
+
+        <p style="line-height: 1.5; color:#555;">
+            A personal portfolio built using Django to showcase my skills, projects, and contact information.
+        </p>
+
+        <p style="font-size: 14px;"><strong>Tech Stack:</strong> HTML, CSS, Django</p>
+
+        <a href="https://github.com/still-purrfect" target="_blank"
+           style="display:inline-block; margin-top:10px; color:#6C63FF; text-decoration:none; font-weight:500;">
+           View Project →
+        </a>
+
+    </div>
+
+    <!-- PROJECT 2 -->
+    <div style="
+        background: white;
+        padding: 20px;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+    "
+    onmouseover="this.style.transform='translateY(-5px)'"
+    onmouseout="this.style.transform='translateY(0)'">
+
+        <h3 style="color:#6C63FF; margin-bottom: 10px;">Python Basics Projects</h3>
+
+        <p style="line-height: 1.5; color:#555;">
+            Small Python programs that helped me understand programming logic and problem solving.
+        </p>
+
+        <p style="font-size: 14px;"><strong>Tech Stack:</strong> Python</p>
+
+        <a href="https://github.com/still-purrfect" target="_blank"
+           style="display:inline-block; margin-top:10px; color:#6C63FF; text-decoration:none; font-weight:500;">
+           View Project →
+        </a>
+
+    </div>
+
+    <!-- PROJECT 3 -->
+    <div style="
+        background: white;
+        padding: 20px;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+    "
+    onmouseover="this.style.transform='translateY(-5px)'"
+    onmouseout="this.style.transform='translateY(0)'">
+
+        <h3 style="color:#6C63FF; margin-bottom: 10px;">Networking Practice</h3>
+
+        <p style="line-height: 1.5; color:#555;">
+            Hands-on networking practice using Huawei eNSP and DHCP configuration labs.
+        </p>
+
+        <p style="font-size: 14px;"><strong>Tech Stack:</strong> Networking, eNSP</p>
+
+        <a href="https://github.com/still-purrfect" target="_blank"
+           style="display:inline-block; margin-top:10px; color:#6C63FF; text-decoration:none; font-weight:500;">
+           View Project →
+        </a>
+
+    </div>
+
+</div>
+
+{% endblock %}
