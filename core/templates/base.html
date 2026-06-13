@@ -1,3 +1,5 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -6,7 +8,7 @@
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
-    <!-- Font Awesome Icons -->
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
     <style>
@@ -22,9 +24,6 @@
             background: #6a4c93;
             padding: 15px;
             text-align: center;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
         }
 
         .navbar a {
@@ -32,66 +31,49 @@
             margin: 15px;
             text-decoration: none;
             font-weight: 500;
-            transition: all 0.2s ease;
         }
 
         .navbar a:hover {
             opacity: 0.8;
-            transform: translateY(-2px);
         }
 
         /* CONTENT */
         .container {
+            padding: 40px;
+        }
+
+        /* FOOTER */
+        .footer {
             text-align: center;
-            margin-top: 80px;
             padding: 20px;
-        }
-
-        h1 {
-            color: #6a4c93;
-            font-size: 40px;
-        }
-
-        h2 {
-            font-weight: 400;
-            color: #444;
-        }
-
-        p {
-            font-size: 16px;
-            color: #555;
-        }
-
-        hr {
-            width: 60%;
-            margin: 20px auto;
-            border: 1px solid #eee;
-        }
-
-        /* ICON ANIMATION */
-        a i {
-            transition: transform 0.2s ease;
-        }
-
-        a i:hover {
-            transform: scale(1.2);
+            background: #eee;
+            margin-top: 50px;
         }
     </style>
+
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
 
 <body>
 
+    <!-- ✅ NAVBAR BACK -->
     <div class="navbar">
-        <a href="/">Home</a>
-        <a href="/about/">About</a>
-        <a href="/projects/">Projects</a>
-        <a href="/contact/">Contact</a>
+       <a href="{% url 'home' %}">Home</a>
+       <a href="{% url 'about' %}">About</a>
+       <a href="{% url 'projects' %}">Projects</a>
+       <a href="{% url 'contact' %}">Contact</a>
     </div>
 
+    <!-- ✅ ONLY ONE BLOCK -->
     <div class="container">
         {% block content %}
         {% endblock %}
     </div>
+
+    <footer class="footer">
+        <p>© 2026 Maryanne Akinyi</p>
+        
+    </footer>
 
 </body>
 </html>
