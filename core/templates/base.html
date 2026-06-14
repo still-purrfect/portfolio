@@ -1,79 +1,38 @@
 {% load static %}
-
 <!DOCTYPE html>
 <html>
 <head>
     <title>My Portfolio</title>
 
-    <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
-    <!-- Font Awesome -->
+    <!-- Font Awesome (IMPORTANT for contact icons) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
-    <style>
-        body {
-            margin: 0;
-            font-family: 'Poppins', sans-serif;
-            background: #faf7ff;
-            color: #333;
-        }
-
-        /* NAVBAR */
-        .navbar {
-            background: #6a4c93;
-            padding: 15px;
-            text-align: center;
-        }
-
-        .navbar a {
-            color: white;
-            margin: 15px;
-            text-decoration: none;
-            font-weight: 500;
-        }
-
-        .navbar a:hover {
-            opacity: 0.8;
-        }
-
-        /* CONTENT */
-        .container {
-            padding: 40px;
-        }
-
-        /* FOOTER */
-        .footer {
-            text-align: center;
-            padding: 20px;
-            background: #eee;
-            margin-top: 50px;
-        }
-    </style>
 
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
 
 <body>
 
-    <!-- ✅ NAVBAR BACK -->
-    <div class="navbar">
-       <a href="{% url 'home' %}">Home</a>
-       <a href="{% url 'about' %}">About</a>
-       <a href="{% url 'projects' %}">Projects</a>
-       <a href="{% url 'contact' %}">Contact</a>
-    </div>
+<div class="page-wrapper">
 
-    <!-- ✅ ONLY ONE BLOCK -->
-    <div class="container">
+    <nav class="navbar">
+        <a href="{% url 'home' %}">Home</a>
+        <a href="{% url 'about' %}">About</a>
+        <a href="{% url 'projects' %}">Projects</a>
+        <a href="{% url 'contact' %}">Contact</a>
+    </nav>
+
+    <main class="container">
         {% block content %}
         {% endblock %}
-    </div>
+    </main>
 
     <footer class="footer">
-        <p>© 2026 Maryanne Akinyi</p>
-        
+        © 2026 Maryanne Akinyi
     </footer>
+
+</div>
 
 </body>
 </html>
